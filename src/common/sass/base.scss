@@ -1,0 +1,43 @@
+@media (-webkit-min0-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5){
+  .border-1px{
+    &:after{
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7)
+    }
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2){
+  .border-1px{
+    &:after{
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5)
+    }
+  }
+}
+
+.clearfix{
+  display: inline-block;
+  &:after{
+    display: block;
+    content: ".";
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+  }
+}
+
+body, html{
+  line-height: 1;
+  font-weight: 200;
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif
+}
+body{
+  scrollbar-arrow-color: #f4ae21;
+  scrollbar-face-color: #333;
+  scrollbar-3dlight-color: #666;
+  scrollbar-highlight-color: #666;
+  scrollbar-shadow-color: #999;
+  scrollbar-darkshadow-color: #666;
+  scrollbar-track-color: #666;
+}
