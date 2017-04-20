@@ -134,6 +134,16 @@ export default {
 <style lang="sass">
 @import "../../common/sass/mixin.scss";
 .ratings{
+  position: absolute;
+  top: 174px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  &::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+  }
   .ratings-content{
     .overview{
       display: flex;
