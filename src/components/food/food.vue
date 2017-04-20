@@ -150,7 +150,7 @@ export default {
 <style lang="sass" rel="stylesheet/sass">
 @import "../../common/sass/mixin.scss";
 .food-detail-wrap{
-  position: absolute;
+  position: fixed;
   bottom: 48px;
   top: 0;
   left: 0;
