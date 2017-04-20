@@ -9,9 +9,9 @@
             :class="[index === currentIndex?'current': '']"
             @click="selectMenu(index)">
           <span class="item-wrap">
-                    <span v-if="item.type>=0"
-                          class="icon"
-                          :class="classMap[item.type]"></span>{{item.name}}
+                        <span v-if="item.type>=0"
+                              class="icon"
+                              :class="classMap[item.type]"></span>{{item.name}}
           </span>
         </li>
       </ul>
@@ -22,7 +22,8 @@
             ref="fScroll">
           <h2 class="title">{{item.name}}</h2>
           <li v-for="food in item.foods"
-              class="food-item border-1px" @click.stop="_selectFood(food, true)">
+              class="food-item border-1px"
+              @click.stop="_selectFood(food, true)">
             <img :src="food.image"
                  width="57"
                  height="57">
@@ -34,14 +35,18 @@
               <p class="f-price"><span>￥{{food.price}}</span><span v-if="food.oldPrice">￥{{food.oldPrice}}</span></p>
             </div>
             <div class="cartcontrol-wrap">
-              <Cartcontrol :food="food" :ballDrop="true"></Cartcontrol>
+              <Cartcontrol :food="food"
+                           :ballDrop="true"></Cartcontrol>
             </div>
           </li>
         </ul>
       </div>
     </div>
-    <Shopcart :selectedFoods="selectedFood" :deliveryPrice="seller.deliveryPrice" :minPrice="seller.minPrice"></Shopcart>
-    <food :selectFood="selectFood" :showFood="selectFood_show"></food>
+    <Shopcart :selectedFoods="selectedFood"
+              :deliveryPrice="seller.deliveryPrice"
+              :minPrice="seller.minPrice"></Shopcart>
+    <food :selectFood="selectFood"
+          :showFood="selectFood_show"></food>
   </div>
 </template>
 
@@ -59,7 +64,8 @@ export default {
       scrollY: [],
       inScroll: false,
       selectFood: {},
-      selectFood_show: {show: false}
+      selectFood_show: { show: false },
+      onscroll: false
     }
   },
   computed: {
@@ -146,16 +152,21 @@ export default {
       let scroll = this.$refs.scroll
       let len = this.scrollY.length
       scroll.addEventListener('scroll', () => {
-        setTimeout(() => {
-          for (let i = 0; i < len; i++) {
-            let height1 = this.scrollY[i]
-            let height2 = this.scrollY[i + 1]
-            if (height1 <= scroll.scrollTop && scroll.scrollTop < height2 || !height2) {
-              this.currentIndex = i
-              return
+        if (!this.onscroll) {
+          this.onscroll = true
+          setTimeout(() => {
+            console.log('1')
+            this.onscroll = false
+            for (let i = 0; i < len; i++) {
+              let height1 = this.scrollY[i]
+              let height2 = this.scrollY[i + 1]
+              if (height1 <= scroll.scrollTop && scroll.scrollTop < height2 || !height2) {
+                this.currentIndex = i
+                return
+              }
             }
-          }
-        }, 150)
+          }, 150)
+        }
       })
     },
     addfood(target) {
