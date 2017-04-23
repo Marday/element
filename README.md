@@ -16,12 +16,15 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# 文件已经通过build打包，直接查看直接运行
+node prod.server.js
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 �ļ��� PATH �б�
 �����к�Ϊ 00000200 3CC8:53F5
-E:.
+项目结构
 |   .babelrc
 |   .editorconfig
 |   .eslintignore
@@ -32,7 +35,7 @@ E:.
 |   package.json
 |   prod.server.js
 |   README.md
-|   
+|
 +---build
 |       build.js
 |       check-versions.js
@@ -43,22 +46,22 @@ E:.
 |       webpack.base.conf.js
 |       webpack.dev.conf.js
 |       webpack.prod.conf.js
-|       
+|
 +---config
 |       dev.env.js
 |       index.js
 |       prod.env.js
-|       
+|
 +---dist
 |   |   index.html
-|   |   
+|   |
 |   \---static
 |       |   reset.css
-|       |   
+|       |
 |       +---css
 |       |       app.286021c06e66f995292ce39feab9167a.css
 |       |       app.286021c06e66f995292ce39feab9167a.css.map
-|       |       
+|       |
 |       \---js
 |               app.e90fabc5e31e22aa1664.js
 |               app.e90fabc5e31e22aa1664.js.map
@@ -66,44 +69,44 @@ E:.
 |               manifest.792fd92f4fa3f0b6835a.js.map
 |               vendor.8c7781ad5379f4a544a3.js
 |               vendor.8c7781ad5379f4a544a3.js.map
-|               
+|
 +---src
 |   |   App.vue
 |   |   main.js
-|   |   
+|   |
 |   +---common
 |   |   +---fonts
 |   |   |       sell-icon.eot
 |   |   |       sell-icon.svg
 |   |   |       sell-icon.ttf
 |   |   |       sell-icon.woff
-|   |   |       
+|   |   |
 |   |   +---js
 |   |   |       formatDate.js
 |   |   |       store.js
-|   |   |       
+|   |   |
 |   |   \---sass
 |   |           base.scss
 |   |           icon.scss
 |   |           index.scss
 |   |           mixin.scss
-|   |           
+|   |
 |   +---components
 |   |   +---Cartcontrol
 |   |   |       Cartcontrol.vue
-|   |   |       
+|   |   |
 |   |   +---commentselect
 |   |   |       commentselect.vue
-|   |   |       
+|   |   |
 |   |   +---division
 |   |   |       division.vue
-|   |   |       
+|   |   |
 |   |   +---food
 |   |   |       food.vue
-|   |   |       
+|   |   |
 |   |   +---goods
 |   |   |   |   goods.vue
-|   |   |   |   
+|   |   |   |
 |   |   |   \---img
 |   |   |           decrease_3@2x.png
 |   |   |           decrease_3@3x.png
@@ -115,13 +118,13 @@ E:.
 |   |   |           invoice_3@3x.png
 |   |   |           special_3@2x.png
 |   |   |           special_3@3x.png
-|   |   |           
+|   |   |
 |   |   +---ratings
 |   |   |       ratings.vue
-|   |   |       
+|   |   |
 |   |   +---seller
 |   |   |   |   seller.vue
-|   |   |   |   
+|   |   |   |
 |   |   |   \---img
 |   |   |           decrease_4@2x.png
 |   |   |           decrease_4@3x.png
@@ -133,13 +136,13 @@ E:.
 |   |   |           invoice_4@3x.png
 |   |   |           special_4@2x.png
 |   |   |           special_4@3x.png
-|   |   |           
+|   |   |
 |   |   +---shopcart
 |   |   |       Shopcart.vue
-|   |   |       
+|   |   |
 |   |   +---star
 |   |   |   |   star.vue
-|   |   |   |   
+|   |   |   |
 |   |   |   \---img
 |   |   |           star24_half@2x.png
 |   |   |           star24_half@3x.png
@@ -159,10 +162,10 @@ E:.
 |   |   |           star48_off@3x.png
 |   |   |           star48_on@2x.png
 |   |   |           star48_on@3x.png
-|   |   |           
+|   |   |
 |   |   \---vueHeader
 |   |       |   VueHeader.vue
-|   |       |   
+|   |       |
 |   |       \---img
 |   |               brand@2x.png
 |   |               brand@3x.png
@@ -178,10 +181,10 @@ E:.
 |   |               invoice_1@3x.png
 |   |               special_3@2x.png
 |   |               special_3@3x.png
-|   |               
+|   |
 |   \---router
 |           index.js
-|           
+|
 \---static
         reset.css
-        
+
