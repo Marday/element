@@ -24,7 +24,7 @@ node prod.server.js
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 �ļ��� PATH �б�
 �����к�Ϊ 00000200 3CC8:53F5
-项目结构
+E:.
 |   .babelrc
 |   .editorconfig
 |   .eslintignore
